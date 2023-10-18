@@ -27,7 +27,3 @@ class CodeMode:
                 return list
         list.append(self.data)
         return list
-# conn = pymongo.MongoClient(inputserver)['Inside-Data-Business-Out']
-# collection=conn['61d78f2db21547f49ab4b92ebbd058b8']
-# for data in collection.find({}):
-#     print(CodeMode(data, 'Inside-Data-Basic-Out','Inside-Data-Business-Out').process())
