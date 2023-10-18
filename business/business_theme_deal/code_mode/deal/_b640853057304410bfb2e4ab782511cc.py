@@ -30,7 +30,3 @@ class CodeMode:
                 map['createTime']=create_time
                 list.append(map)
         return list
-# conn = pymongo.MongoClient(inputserver)['Inside-Data-Basic-Out']
-# collection=conn['10049a9724f84cddb8245b13a8a80fdf']
-# for data in collection.find({}).limit(100):
-#     print(CodeMode(data, 'Inside-Data-Basic-Out','Inside-Data-Business-Out').process())
