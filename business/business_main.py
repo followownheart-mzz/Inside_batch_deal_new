@@ -165,11 +165,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    # deliver_resource = get_ana_process()[::-1]
-    # while True:
-    #     # 从队列中获取数据
-    #
-    #     if not deliver_resource :
-    #         break  # 获取到空值时，表示所有任务已完成，线程退出
-    #     item = deliver_resource.pop()
-    #     process_item(item)
