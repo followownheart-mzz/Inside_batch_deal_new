@@ -9,8 +9,7 @@ from public.database_conn import *
 
 # 获取基础主题id（指定基础主题名称）
 def get_deliver_resource():
-    # deliver_resource = pd.read_excel(r"交付数据源.xlsx", sheet_name="Sheet4")['name'].tolist()
-    deliver_resource = ['金融动态', '京东电商数据']
+    deliver_resource = pd.read_excel(r"交付数据源.xlsx", sheet_name="Sheet4")['name'].tolist()
     deliver_resource_id = []
     conn_inside, cursor_inside = conn_inside_mysql()
     for theme_name in deliver_resource:
