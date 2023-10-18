@@ -68,14 +68,14 @@ def process_item(item):
 
         if len(data):
             # 设置基础主题检查规则
-            # try:
-            out, result = SetCheckRule(basic_theme_id, data, 'acq_check_config', 'acq_theme_field').set_rule()
-            print(basic_theme_name, '设置基础主题检查规则成功')
-            # except Exception as e:
-            #     error = error + '基础主题-设置基础主题检查规则失败-' + str(e.args) + ';'
-            #     print(error)
-            #     out = pd.DataFrame({})
-            #     result = pd.DataFrame({})
+            try:
+                out, result = SetCheckRule(basic_theme_id, data, 'acq_check_config', 'acq_theme_field').set_rule()
+                print(basic_theme_name, '设置基础主题检查规则成功')
+            except Exception as e:
+                error = error + '基础主题-设置基础主题检查规则失败-' + str(e.args) + ';'
+                print(error)
+                out = pd.DataFrame({})
+                result = pd.DataFrame({})
 
             # 存储基础主题数据
             try:
