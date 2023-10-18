@@ -12,11 +12,11 @@ class MainCodeMode:
         self.from_type=from_type
     def get_theme_info(self):
         conn = pymysql.connect(
-            host='192.168.2.230',
-            database='inside',
-            port=3306,
-            user='datagroup01',
-            password='datagroup01',
+            host='',
+            database='',
+            port=,
+            user='',
+            password='',
             autocommit=True
         )
         cursor = conn.cursor()
@@ -86,53 +86,6 @@ class MainCodeMode:
             datas=self.df['result'].sum()
             self.df=pd.DataFrame(datas)
             return self.df
-# conn = pymysql.connect(
-#     host='192.168.2.230',
-#     database='inside',
-#     port=3306,
-#             user='datagroup01',
-#             password='datagroup01',
-#             autocommit=True
-#         )
-# cursor = conn.cursor()
-#
-# # 获取program信息
-# sql="""
-# select
-# a.id,
-# a.from_theme_id,
-# a.to_theme_id,
-# a.process_mode,
-# a.from_type,
-# b.name as to_theme_name,
-# c.program
-# from (select * from ana_program where id='38745834433b44ff89223b75e054962e')a
-# left join ana_theme b
-# on a.to_theme_id=b.id
-# left join ana_program_code c
-# on a.id=c.program_id
-# """
-# cursor.execute(sql)
-# rest=cursor.fetchone()
-# basic_theme_id=rest[1]
-# from_type=rest[4]
-# if from_type=='基础主题':
-#     database='Inside-Data-Basic-Out'
-# else:
-#     database='Inside-Data-Business-Out'
-# conn = pymongo.MongoClient(inputserver)[database]
-# mycol = conn[basic_theme_id]
-# #cursor = mycol.find({'$or':[ {'评估基准日':{'$lt':datetime.datetime(3000,1,1)}},{'评估基准日':{'$eq': None}}]})
-# cursor = mycol.find().limit(10000)
-# df=pd.DataFrame(list(cursor))
-# code_mode=MainCodeMode(df,'38745834433b44ff89223b75e054962e')
-# code_mode.main()
-#
-#
-#
-
-
-
 
 
 
