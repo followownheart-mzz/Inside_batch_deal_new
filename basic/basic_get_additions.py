@@ -28,12 +28,3 @@ class GetNewAdditions:
         df['basicUpdateTime'] = datetime.datetime.now()
         df['basicBatchNumber'] = self.number_of_times
         return df
-
-
-## nas库测试
-        # mycol = conn['ggggg']
-        # limit_date=datetime.datetime(2023,4,28,9,17,12,18)  # 2023,4,28,9,17,12,18 2023-04-28 09:19:12.18
-        # cursor=mycol.find({ "$and": [
-        #     {"createTime": {"$gt": lastWorkTime}},
-        #     {"createTime": {"$lte": limit_date}}
-        # ]})
