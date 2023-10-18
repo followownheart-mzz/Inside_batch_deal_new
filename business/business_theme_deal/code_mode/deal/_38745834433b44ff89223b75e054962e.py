@@ -44,13 +44,3 @@ class CodeMode:
             list.append(datas)
 
         return list
-
-# conn = pymongo.MongoClient(inputserver)['Inside-Data-Business-Out']
-# id_list=[]
-# result=[]
-# collection=conn['1b1d4112928a466bae8c7b1b005c8722']
-# for data in collection.find({}).limit(100):
-#     id_list.append({'id':data['id']})
-#     result=result+CodeMode(data, 'Inside-Data-Basic-Out','Inside-Data-Business-Out').process()
-# print('id_list:',pd.DataFrame(id_list))
-# print('result:',pd.DataFrame(result))
